@@ -1,0 +1,16 @@
+<!-- Implemente a função imc para que a mesma calcule o índice de massa corpórea, ou seja, o
+IMC é igual a peso dividido pela altura ao quadrado. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+O IMC é
+<p id="imc"></p>
+<script>
+function imc(peso, altura) {
+    return peso / (altura * altura)
+}
+document.getElementById("imc").innerHTML = imc(1.80, 90);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- No código abaixo, usando if-else e else-if, implemente uma função que, dada duas notas
+(np1 e np2) como entrada, a função deve retornar uma string que deve dizer se o aluno foi
+“Aprovado com Conceito A”, “Aprovado com Conceito B”, “Reprovado Direto” ou
+“Reprovado na Final”.
+
+- Aprovado com Conceito A: quando a média de np1 e np2 é maior ou igual a 7.0;
+- Reprovado Direto: quando a média de np1 e np2 é menor que 4.0;
+- Aprovado com Conceito B: quando a média de np1 e np2 for maior ou igual a 4.0 e
+menor que 7.0, crie uma variável chamada de nfinal e atribua diretamente um valor a ela.
+Calcule uma nova média que consiste do valor obtido da média de np1 e np2 mais a nfinal.
+Caso essa nova média seja maior ou igual a 5.0, então a aprovação é com conceito B.
+- Reprovado na Final: quando no caso anterior, a nova média calculada é menor que 5.0 -->
+
+<!DOCTYPE html>
+<html>
+<body>
+Resultado: 
+<p id="resultado"></p>
+
+<script>
+    function situacaoAluno(np1, np2) {
+        let media = (np1+np2)/2
+        if(media >= 7){
+            return "Aprovado por conceito A!"
+        } else if (media <4){
+            return "Reprovado direto!"
+        } else if (media >= 4 && media < 7){
+            let nfinal = 5;
+            let novaMedia = (media + nfinal)/2
+            if(novaMedia >= 5){
+                return "Aprovado por conceito B!"
+            } else {
+                return "Reprovado na final!"
+            }
+        }
+    }
+    document.getElementById("resultado").innerHTML = situacaoAluno(10, 2);
+</script>
+
+</body>
+</html>
+
+    

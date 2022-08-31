@@ -1,0 +1,30 @@
+<!-- Para o código abaixo, implemente a função reprovados, retornando apenas os alunos
+(nome e ira) com ira inferior a 7.0 -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p id="demo"></p>
+<script>
+const alunos = [
+{nome:"Leandro",ira:7.5},
+{nome:"Maria",ira:8.2},
+{nome:"José",ira:4.5},
+{nome:"Diana",ira:5.4},
+{nome:"Bruna",ira:6.7}
+];
+function reprovados(alunos){
+    let res = "<ul>"
+    for (let i = 0; i < alunos.length; i++) {
+        if(alunos[i].ira < 7){
+            res += "<li> Nome: "  + alunos[i].nome + ", IRA: " + alunos[i].ira + " </li>";
+        }
+    }
+    res += "</ul>";
+    return res
+}
+document.getElementById("demo").innerHTML = reprovados(alunos);
+</script>
+</body>
+</html>
